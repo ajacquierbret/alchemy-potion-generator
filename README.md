@@ -13,3 +13,4 @@ Please feel free to contribute and improve functionalities, and/or to give some 
 - jQuery (3.4.1)
 - Font Awesome (5.11.2)
 - Popper JS (1.15.0)
+- Bootstrap Select (1.13.9)
