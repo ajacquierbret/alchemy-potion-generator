@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+<link rel="stylesheet" href="css/main.css">
+<title>Alchemy Potion Generator v1.0 - by Adrien Jacquier Bret</title>
+</head>
+<body>
+        <div class="container">
+                <div class="row justify-content-center">
+                    <div id="title" class="col-xl-8 col-lg-8 col-md-10 col-sm-12 col-12 text-center">
+                        <h1>ALCHEMY POTION GENERATOR v1.0</h1>
+                        <h4><strong>The world's first Javascript powered D&D potion generator.<br>– by Adrien Jacquier Bret –</strong><br><br>
+                            <i>Inspired by "The Lemon King's Guide To Alchemy"</i></h4><br>
+                        <div class="alert alert-danger alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true" style="font-size: 35px;">&times;</span></button>
+                            This generator isn't aimed to replace the <a href="https://drive.google.com/file/d/1EW4paYVGstgI-LuCalbcQCAMmHLr0-rG/view">original guide provided by its author</a>. It is built to make potions in a more fast and convenient way, but too avoid any mistake or oversight, or even coding errors (yes it happens), please read carefully the complete guide before using this generator.<br>Also, be sure to compare results with your own calculation when something seems strange to you.
+                        </div>
+                        <div class="alert alert-info alert-dismissible fade show" role="alert"><button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                            <span aria-hidden="true" style="font-size: 35px;">&times;</span></button>
+                            This software is open-source and its source code is available <a href="https://github.com/ajacquierbret/alchemy-potion-generator">at this Github repository</a>.
+                            <br>Please feel free to contribute and improve functionalities, and/or to give some feedback about things you'd like me to add or fix. Enjoy it !<br><br>
+                            <b>If you'd like to have a map looking like this one used in the background, have a look at <a href="https://dbcartography.com">dharmablues's website !</a></b>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center text-center mt-5">
+                    <div class="col-3 col-xl-3 col-md-5 col-sm-9 col-12 my-xl-0 my-lg-0 my-md-4 my-sm-4 my-4">
+                        <h4>The Rivenlands</h4>
+                        <select class="form-control" id="raritySelect1">
+                           <option value="1">Common</option>
+                           <option value="2">Uncommon</option> 
+                           <option value="3">Rare</option> 
+                        </select>
+                        <select class="form-control" id="select1" aria-placeholder="Choose ingredient(s)">
+                        </select>
+                    </div>
+                    <div class="col-3 col-xl-3 col-md-5 col-sm-9 col-12 my-xl-0 my-lg-4 my-md-4 my-sm-4 my-4">
+                        <h4>The Midlands</h4>
+                        <select class="form-control" id="raritySelect2">
+                                <option value="1">Common</option>
+                                <option value="2">Uncommon</option> 
+                                <option value="3">Rare</option> 
+                             </select>
+                        <select class="form-control" id="select2" aria-placeholder="Choose ingredient(s)">
+                        </select>
+                    </div>
+                    <div class="col-3 col-xl-3 col-md-5 col-sm-9 col-12 my-xl-0 my-lg-0 my-md-4 my-sm-4 my-4">
+                        <h4>The Chainlands</h4>
+                        <select class="form-control" id="raritySelect3">
+                           <option value="1">Common</option>
+                           <option value="2">Uncommon</option> 
+                           <option value="3">Rare</option> 
+                        </select>
+                        <select class="form-control" id="select3" aria-placeholder="Choose ingredient(s)">
+                        </select>
+                    </div>
+                </div>
+                <div class="row justify-content-center text-center mt-0 mt-md-0 mt-lg-5 mt-xl-5 mt-sm-0">
+                        <div class="col-3 col-xl-3 col-md-5 col-sm-9 col-12 my-xl-0 my-lg-0 my-md-4 my-sm-4 my-4">
+                            <h4>The North</h4>
+                            <select class="form-control" id="raritySelect4">
+                                    <option value="1">Common</option>
+                                    <option value="2">Uncommon</option> 
+                                    <option value="3">Rare</option> 
+                                 </select>
+                            <select class="form-control" id="select4" aria-placeholder="Choose ingredient(s)">
+                            </select>
+                        </div>
+                        <div class="col-3 col-xl-3 col-md-5 col-sm-9 col-12 my-xl-0 my-lg-0 my-md-4 my-sm-4 my-4">
+                            <h4>Eleon</h4>
+                            <select class="form-control" id="raritySelect5">
+                                    <option value="1">Common</option>
+                                    <option value="2">Uncommon</option> 
+                                    <option value="3">Rare</option> 
+                                 </select>
+                            <select class="form-control" id="select5" aria-placeholder="Choose ingredient(s)">
+                            </select>
+                        </div>
+                        <div class="col-3 col-xl-3 col-md-5 col-sm-9 col-12 my-xl-0 my-lg-0 my-md-4 my-sm-4 my-4">
+                            <h4>Concentrates</h4>
+                            <select class="form-control" id="raritySelect6" hidden>
+                                    <option value="1" selected></option> 
+                                 </select>
+                            <select class="form-control" id="select6" aria-placeholder="Choose concentrate(s)"></select>
+                        </div>
+                    </div>
+                <div class="row justify-content-center margin">
+                    <div class="col-4 col-3 col-md-8 col-sm-12 col-12 my-xl-3 my-lg-3 my-md-4 my-sm-4 my-4">
+                        <div class="input-group justify-content-center">
+                                <div class="input-group-prepend">
+                                    <span class="input-group-text"><i class="fa fa-flask"></i></span>
+                                </div>
+                                <input id="alchemyBonus" type="number" placeholder="Alchemy Bonus" aria-label="Alchemy Bonus">
+                        </div>
+                    </div>
+                    <div class="col-4 col-3 col-md-8 col-sm-12 col-12 my-xl-3 my-lg-3 my-md-4 my-sm-4 my-4">
+                            <div class="input-group justify-content-center">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-dice"></i></span>
+                                    </div>
+                                    <input id="diceRoll" type="number" min="0" placeholder="Dice Roll" aria-label="Dice Roll">
+                            </div>
+                        </div>
+                    <div class="col-6 col-3 col-md-8 col-sm-12 col-12 my-xl-3 my-lg-3 my-md-4 my-sm-4 my-4">
+                            <div class="input-group justify-content-center">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text"><i class="fa fa-minus-circle"></i></span>
+                                    </div>
+                                    <input id="effectMalus" type="number" max="0" placeholder="Effect Malus" aria-label="Effect Malus">
+                            </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-xl-6 col-lg-6 col-md-8 col-sm-10 col-10" id="selectionViewer">
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-lg-3 col-xl-3 col-md-5 col-sm-6 col-7">
+                        <button class="btn btn-block btn-dark" id="generateButton" style="font-weight: 700;">GENERATE</button>
+                    </div>
+                </div>
+                <div class="row justify-content-center">
+                    <div class="col-6 text-center mt-5" id="result"></div>
+                </div>
+                <div class="row justify-content-center mt-5 mb-2">
+                    <div class="col-lg-6 col-xl-6 col-md-8 col-sm-10 col-10 alert alert-warning">
+                        <div class="row">
+                            <div class="col-1"><i class="fa fa-exclamation-triangle"></i></div>
+                            <div class="col-11">
+                                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                            <span aria-hidden="true" style="font-size: 35px;">&times;</span></button>
+                                    <p>If a player mixes ingredients in a retort or a flask and the ingredients share both positive
+                                            and negative effects, the potion fails and the player learns nothing. Use of an
+                                            alembic does not help in this situation because the player does not know what effects to filter
+                                            out.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row justify-content-center" id="effectMalusWarning">
+                        <div class="col-lg-6 col-xl-6 col-md-8 col-sm-10 col-10 alert alert-warning">
+                            <div class="row">
+                                <div class="col-1"><i class="fa fa-exclamation-triangle"></i></div>
+                                <div class="col-11">
+                                        <p>If, for some reason, an alchemist wants to make a low-potency potion, he or she may choose for
+                                                the effect to be lessened by d6s, diminishing the potency by the result out of ten (ex: roll a 4,
+                                                the potency is reduced by 4/10). The number of d6s must be chosen before rolling.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.15.0/umd/popper.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="ingredients.js"></script>
+<script src="main.js"></script>
+</body>
+</html>
