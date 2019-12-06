@@ -46,7 +46,6 @@ function addIngredients(listNumber, selectNumber) {
 for (ingredient in listNumber) {
     effects = JSON.stringify(listNumber[ingredient]);
     selectNumber.options.add(new Option(ingredient, effects));
-    console.log(selectNumber.innerHTML);
 }
 };
 
@@ -55,20 +54,14 @@ function inspectAndAddList(value, commonList, uncommonList, rareList, anySelect)
     if ($(value).val() == "1") {
         anySelect.innerHTML = "";
         addIngredients(commonList, anySelect);
-        console.log("Common added");
     }
     else if ($(value).val() == "2") {
         anySelect.innerHTML = "";
         addIngredients(uncommonList, anySelect);
-        console.log("Uncommon added");
     }
     else if ($(value).val() == "3") {
         anySelect.innerHTML = "";
         addIngredients(rareList, anySelect);
-        console.log("Rare added");
-    }
-    else {
-        console.log("Nothing found such as common or uncommon or rare");
     }
 };
 
@@ -92,7 +85,6 @@ inspectAndAddList(rarity6, concentrates, undefined, undefined, select6);
 
 function deleteItem(item) {
     finalSelection.delete(item);
-    console.log(`${item} deleted !`);
 };
 
 function selectListener(select) {
@@ -170,5 +162,4 @@ generateButton.on('click', function() {
     } else if (finalSelection.size > 6) {
         result.innerHTML = "You can't make a potion with more than six ingredients."
     }
-    console.log(resultPotion);
 });
