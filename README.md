@@ -17,4 +17,4 @@ Please feel free to contribute and improve functionalities, and/or to give some 
 - Popper JS (1.15.0)
 
 
-Special thanks to "volcano" (StackOverflow) who contributed to this project.
+Special thanks to "volcanic" (StackOverflow) who contributed to this project.
