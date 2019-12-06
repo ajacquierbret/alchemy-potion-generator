@@ -111,7 +111,7 @@ selectListener(select6);
 finalSelection = selectListener();
 
 // Core algorythm of the generation process
-// IMPORTANT : Special thanks to "volcano" (Stackoverflow) that helped me improving this algorythm.
+// IMPORTANT : Special thanks to "volcanic" (Stackoverflow) that helped me improving this algorythm.
 function generatePotion() {
     var effectObject = {};
     var resultPotion = '';
