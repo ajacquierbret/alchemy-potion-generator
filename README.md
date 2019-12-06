@@ -1,6 +1,8 @@
 # Alchemy Potion Generator V1.0
 ### The world's first Javascript powered D&amp;D potion generator.
 
+Github hosting : https://ajacquierbret.github.io/alchemy-potion-generator/
+
 This generator isn't aimed to replace the original guide provided by its author. It is built to make potions in a more fast and convenient way, but too avoid any mistake or oversight, or even coding errors (yes it happens), please read carefully the complete guide before using this generator.
 Also, be sure to compare results with your own calculation when results seems strange to you.
 
